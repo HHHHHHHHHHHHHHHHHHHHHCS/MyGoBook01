@@ -1,7 +1,11 @@
 package main
 
-import "fmt"
+import (
+	"../MusicLib"
+	"fmt"
+)
 
 func main() {
-	fmt.Println(1)
+	a := MusicLib.MusicEntry{"1", "Will", "AAA", "www.baidu.com", "MP3"}
+	fmt.Printf("%+v\n", a)
 }
