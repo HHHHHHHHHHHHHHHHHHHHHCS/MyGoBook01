@@ -17,7 +17,7 @@ func handleLibCommands(tokens []string) {
 	case "list":
 		for i := 0; i < lib.Len(); i++ {
 			e, _ := lib.Get(i)
-			fmt.Println(i+1, ":", e.ID,e.Name, e.Artist, e.Source, e.FileType)
+			fmt.Println(i+1, ":", e.ID, e.Name, e.Artist, e.Source, e.FileType)
 		}
 	case "add":
 		if len(tokens) == 6 {
@@ -51,6 +51,8 @@ func handlePlayCommand(tokens []string) {
 }
 
 func main() {
+	//runtime.GOMAXPROCS(runtime.NumCPU())//让GO满核心运行
+
 	fmt.Println(` 
  Enter following commands to control the player: 
  lib list -- View the existing music lib 
