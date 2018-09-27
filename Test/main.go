@@ -1,30 +1,28 @@
 package main
 
-import (
-	"fmt"
-	"sync"
-)
+import "fmt"
 
-var once sync.Once
-var once2 sync.Once
-
-func p1()  {
-	fmt.Println("1")
+func Test2(arr *[]int)  {
+	a:=make([]int,10)
+	for i:=0;i<len(a);i++ {
+		a[i]=i+100
+	}
+	*arr=append(*arr, a...)
 }
 
-func p2()  {
-	fmt.Println("2")
+func Test1(arr *[]int)  {
+	a:=make([]int,10)
+	for i:=0;i<len(a);i++ {
+		a[i]=i
+	}
+	*arr=append(*arr, a...)
+	Test2(arr)
 }
+
 func main() {
-	once.Do(p1)
-	once.Do(p2)
-	once.Do(p1)
-	once.Do(p2)
-	once.Do(p1)
-	once.Do(p2)
-	once2.Do(p2)
-	once2.Do(p1)
-	once2.Do(p2)
-	once2.Do(p1)
-	once2.Do(p2)
+	arr := make([]int,0)
+	Test1(&arr)
+	for k,v:=range arr{
+		fmt.Println(k,v)
+	}
 }
