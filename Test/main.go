@@ -1,6 +1,8 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+)
 
 func Test2(arr *[]int)  {
 	a:=make([]int,10)
@@ -25,4 +27,5 @@ func main() {
 	for k,v:=range arr{
 		fmt.Println(k,v)
 	}
+
 }
