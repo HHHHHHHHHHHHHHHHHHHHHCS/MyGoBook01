@@ -5,7 +5,9 @@ import (
 	"encoding/xml"
 	"errors"
 	"fmt"
+	"log"
 	"net/http"
+	"regexp"
 )
 
 type (
@@ -71,20 +73,64 @@ func (m RssMatcher) Retrieve(feed *Search.Feed) (*rssDocument, error) {
 	}
 
 	//从网络获得rss数据源文档
-	resp,err:=http.Get(feed.URL)
-	if err!=nil{
-		return nil ,err
+	resp, err := http.Get(feed.URL)
+	if err != nil {
+		return nil, err
 	}
 
 	//退出时,关闭返回的响应链接
 	defer resp.Body.Close()
 
 	//检查状态码是不是200,是不是收到了正确的响应
-	if resp.StatusCode!=200{
-		return nil,fmt.Errorf("HTTP Response Error %d\n",resp.StatusCode)
+	if resp.StatusCode != 200 {
+		return nil, fmt.Errorf("HTTP Response Error %d\n", resp.StatusCode)
 	}
 
 	var document rssDocument
-	err=xml.NewDecoder(resp.Body).Decode(&document)
-	return  &document,err
+	err = xml.NewDecoder(resp.Body).Decode(&document)
+	return &document, err
+}
+
+//在文档中搜索特定的选项
+func (m RssMatcher) Search(feed *Search.Feed, searchTerm string) ([]*Search.Result, error) {
+	var results []*Search.Result
+
+	log.Printf("Search Feed Type[%s] Site[%s] For Url [%s]\n", feed.Type, feed.Name, feed.URL)
+
+	docment, err := m.Retrieve(feed)
+	if err != nil {
+		return nil, err
+	}
+
+	for _, channelItem := range docment.Channel.Item {
+		//检查标题部分是否包含搜索选项
+		matched, err := regexp.MatchString(searchTerm, channelItem.Title)
+		if err != nil {
+			return nil, err
+		}
+
+		//如果找到匹配的项,将其作为结果保存
+		if matched {
+			results = append(results, &Search.Result{
+				Field:   "Title",
+				Content: channelItem.Title,
+			})
+		}
+
+		//检查描述部分是否包含搜索项
+		matched, err = regexp.MatchString(searchTerm, channelItem.Description)
+		if err != nil {
+			return nil, err
+		}
+
+		//如果找到匹配的项,将其作为结果保存
+		if matched{
+			results=append(results,&Search.Result{
+				Field:"Desc",
+				Content:channelItem.Description,
+			})
+		}
+	}
+
+	return results,nil
 }
