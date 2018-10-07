@@ -2,97 +2,57 @@ package main
 
 import (
 	"fmt"
-	"sync"
-)
-
-var nc sync.WaitGroup
-var count int64
-
-func main() {
-
-	ch := make(chan int64)
-
-	nc.Add(2)
-	go test(1, ch)
-	go test(-1, ch)
-
-	ch <- 0
-
-	nc.Wait()
-	fmt.Println(count)
-}
-
-func test(z int64, ch chan int64) {
-	defer nc.Done()
-	for i := 0; i < 10000; i++ {
-		//count += z
-		//atomic.AddInt64(&count,z)
-		//runtime.Gosched()
-		temp, ok := <-ch
-		if !ok {
-			return
-		}
-
-		temp += z
-
-		if temp == 1 {
-			close(ch)
-			return
-		}
-
-		ch <- temp
-	}
-}
-
-/*
-import (
-	"fmt"
 	"math/rand"
 	"sync"
 	"time"
 )
 
+const (
+	numberGoroutines = 4
+	taskLoad         = 10
+)
+
 var wg sync.WaitGroup
 
 func init() {
-	rand.Seed(time.Now().UnixNano())
+	rand.Seed(time.Now().Unix())
 }
 
 func main() {
-	court := make(chan int)
+	tasks := make(chan string, taskLoad)
 
-	wg.Add(2)
+	wg.Add(numberGoroutines)
 
-	go player("Nadal", court)
-	go player("Dj", court)
+	for gr := 1; gr <= numberGoroutines; gr++ {
+		go worker(tasks, gr)
+	}
 
-	court <- 1
+	for post := 1; post <= taskLoad; post++ {
+		tasks <- fmt.Sprintf("Task:%d", post)
+	}
+
+	close(tasks)
 
 	wg.Wait()
 }
 
-func player(name string, court chan int) {
+func worker(tasks chan string, worker int) {
 	defer wg.Done()
 
-	for {
-		ball, ok := <-court
-		if !ok {
-			fmt.Printf("player %s Won\n",name)
+	for{
+		task,ok:=<-tasks
+
+		if !ok{
+			fmt.Printf("Workder: %d : Shutting Down\n",worker)
 			return
 		}
 
-		n:=rand.Intn(100)
-		if n%13==0{
-			fmt.Printf("player %s Missed\n",name)
-			close(court)
-			return
-		}
+		fmt.Printf("Worker: %d : Started %s\n",worker,task)
 
-		fmt.Printf("Player  %s Hit %d \n",name,ball)
+		sleep :=rand.Int63n(100)
+		time.Sleep(time.Duration(sleep)*time.Millisecond)
 
-		ball++
+		fmt.Printf("Worker: %d : Completed %s\n",worker,task)
 
-		court<-ball
 	}
 }
-*/
