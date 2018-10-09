@@ -5,6 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f63b3e2-554e-4ecb-b57e-81b396071d56" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/OtherLib/Runner.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OtherLib/Runner_test.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Test/main.go" afterDir="false" />
     </list>
@@ -15,47 +17,48 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/MyGoBook01$Manager_test_go.out" NAME="Manager_test.go Coverage Results" MODIFIED="1537692878206" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MyGoBook01$TestOps_in_Runner_test_go.out" NAME="TestOps in Runner_test.go Coverage Results" MODIFIED="1539054515773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
+    <SUITE FILE_PATH="coverage/MyGoBook01$Manager_test_go.out" NAME="Manager_test.go Coverage Results" MODIFIED="1539054543686" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="GoCoverage" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" />
   </component>
   <component name="FUSProjectUsageTrigger">
     <session id="-1414740965">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="13" />
+          <entry key="project.closed" value="14" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="2" />
-          <entry key="project.open.time.22" value="2" />
+          <entry key="project.open.time.22" value="3" />
           <entry key="project.open.time.23" value="3" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.5" value="1" />
           <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="14" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="go" value="40" />
+          <entry key="go" value="45" />
           <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="40" />
+          <entry key="Go" value="45" />
           <entry key="JSON" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
-          <entry key="go" value="13291" />
+          <entry key="go" value="14742" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="13291" />
+          <entry key="Go" value="14742" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
@@ -69,23 +72,44 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="391">
-              <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="90">
+              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OtherLib/Runner.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-300">
+              <caret line="21" selection-start-line="21" selection-end-line="21" />
               <folding>
-                <element signature="e#14#45#0" expanded="true" />
+                <element signature="e#18#42#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://D:/Go/src/time/time.go">
+        <entry file="file://$PROJECT_DIR$/OtherLib/Runner_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
-              <caret line="616" selection-start-line="616" selection-end-line="618" selection-end-column="61" />
+            <state relative-caret-position="-352">
+              <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+              <folding>
+                <element signature="e#18#60#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/MusicLib/Manager_test.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="150">
+              <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
             </state>
           </provider>
         </entry>
@@ -106,6 +130,7 @@
       <find>Unknow type: 3</find>
       <find>*[]</find>
       <find>dataFile</find>
+      <find>timeout</find>
     </findStrings>
     <replaceStrings>
       <replace>musics</replace>
@@ -151,6 +176,8 @@
         <option value="$PROJECT_DIR$/OtherLib/Curl.go" />
         <option value="$PROJECT_DIR$/OtherLib/GoPrint..go" />
         <option value="$PROJECT_DIR$/Test/main.go" />
+        <option value="$PROJECT_DIR$/OtherLib/Runner_test.go" />
+        <option value="$PROJECT_DIR$/OtherLib/Runner.go" />
       </list>
     </option>
   </component>
@@ -174,7 +201,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -190,6 +216,11 @@
             <path>
               <item name="MyGoBook01" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyGoBook01" type="462c0819:PsiDirectoryNode" />
+              <item name="MusicLib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyGoBook01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyGoBook01" type="462c0819:PsiDirectoryNode" />
               <item name="OtherLib" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -200,50 +231,30 @@
             <path>
               <item name="MyGoBook01" type="b2602c69:ProjectViewProjectNode" />
               <item name="MyGoBook01" type="462c0819:PsiDirectoryNode" />
+              <item name="Search" type="462c0819:PsiDirectoryNode" />
+              <item name="data" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyGoBook01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyGoBook01" type="462c0819:PsiDirectoryNode" />
+              <item name="Search" type="462c0819:PsiDirectoryNode" />
+              <item name="matchers" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="MyGoBook01" type="b2602c69:ProjectViewProjectNode" />
+              <item name="MyGoBook01" type="462c0819:PsiDirectoryNode" />
               <item name="Test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyGoBook01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-            </path>
-            <path>
-              <item name="MyGoBook01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Go SDK 1.10.3" type="20ee2d1f:SyntheticLibraryElementNode" />
-            </path>
-            <path>
-              <item name="MyGoBook01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Go SDK 1.10.3" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyGoBook01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;MyGoBook01&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-            </path>
-            <path>
-              <item name="MyGoBook01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;MyGoBook01&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="MyGoBook01" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="GOPATH &lt;MyGoBook01&gt;" type="20ee2d1f:SyntheticLibraryElementNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="golang.org" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultGoTemplateProperty" value="Go File" />
-    <property name="SearchEverywhereHistoryKey" value="runtime.GOMAXPROCS&#9;null&#9;null" />
+    <property name="SearchEverywhereHistoryKey" value="time&#9;FILE&#9;file://D:/Go/src/time/time.go&#10;runtime.GOMAXPROCS&#9;null&#9;null" />
     <property name="go.gopath.indexing.explicitly.defined" value="true" />
     <property name="last_opened_file_path" value="$USER_HOME$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -267,68 +278,74 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Build.go build main.go">
-    <configuration name="go build MusicLib/" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="MyGoBook01" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="DIRECTORY" />
-      <filePath value="$PROJECT_DIR$/" />
-      <directory value="$PROJECT_DIR$/MusicLib" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build MusicTest.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
-      <module name="MyGoBook01" />
-      <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
-      <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/main/MusicTest.go" />
-      <directory value="$PROJECT_DIR$/" />
-      <method v="2" />
-    </configuration>
-    <configuration name="go build SearchMain.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Go Test.go test OtherLib">
+    <configuration name="go build Manager_test.go Manager.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="MyGoBook01" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/main/SearchMain.go" />
+      <filePath value="$PROJECT_DIR$/MusicLib/Manager_test.go|$PROJECT_DIR$/MusicLib/Manager.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build Runner_test.go Runner.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="MyGoBook01" />
       <working_directory value="$PROJECT_DIR$/" />
-      <go_parameters value="-i" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/Test/main.go" />
+      <filePath value="$PROJECT_DIR$/OtherLib/Runner_test.go|$PROJECT_DIR$/OtherLib/Runner.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="Manager_test.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+    <configuration name="Manager_test.go Manager.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
       <module name="MyGoBook01" />
       <working_directory value="$PROJECT_DIR$/MusicLib" />
-      <go_parameters value="-i" />
       <framework value="gotest" />
       <kind value="FILE" />
       <directory value="$PROJECT_DIR$/" />
-      <filePath value="$PROJECT_DIR$/MusicLib/Manager_test.go" />
+      <filePath value="$PROJECT_DIR$/MusicLib/Manager_test.go|$PROJECT_DIR$/MusicLib/Manager.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Runner_test.go Runner.go" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="MyGoBook01" />
+      <working_directory value="$PROJECT_DIR$/OtherLib" />
+      <framework value="gotest" />
+      <kind value="FILE" />
+      <directory value="$PROJECT_DIR$/" />
+      <filePath value="$PROJECT_DIR$/OtherLib/Runner_test.go|$PROJECT_DIR$/OtherLib/Runner.go" />
+      <method v="2" />
+    </configuration>
+    <configuration name="go test OtherLib" type="GoTestRunConfiguration" factoryName="Go Test" temporary="true" nameIsGenerated="true">
+      <module name="MyGoBook01" />
+      <working_directory value="$PROJECT_DIR$/OtherLib" />
+      <framework value="gotest" />
+      <kind value="DIRECTORY" />
+      <directory value="$PROJECT_DIR$/OtherLib" />
+      <filePath value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build MusicTest.go" />
-      <item itemvalue="Go Test.Manager_test.go" />
-      <item itemvalue="Go Build.go build MusicLib/" />
-      <item itemvalue="Go Build.go build main.go" />
-      <item itemvalue="Go Build.go build SearchMain.go" />
+      <item itemvalue="Go Build.go build Runner_test.go Runner.go" />
+      <item itemvalue="Go Test.Runner_test.go Runner.go" />
+      <item itemvalue="Go Build.go build Manager_test.go Manager.go" />
+      <item itemvalue="Go Test.Manager_test.go Manager.go" />
+      <item itemvalue="Go Test.go test OtherLib" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Go Build.go build main.go" />
-        <item itemvalue="Go Build.go build SearchMain.go" />
-        <item itemvalue="Go Build.go build MusicTest.go" />
-        <item itemvalue="Go Build.go build MusicLib/" />
-        <item itemvalue="Go Test.Manager_test.go" />
+        <item itemvalue="Go Test.go test OtherLib" />
+        <item itemvalue="Go Test.Manager_test.go Manager.go" />
+        <item itemvalue="Go Build.go build Manager_test.go Manager.go" />
+        <item itemvalue="Go Test.Runner_test.go Runner.go" />
+        <item itemvalue="Go Build.go build Runner_test.go Runner.go" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="TestHistory">
+    <history-entry file="Runner_test_go_Runner_go - 2018.10.09 at 11h 10m 59s.xml">
+      <configuration name="Runner_test.go Runner.go" configurationId="GoTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="go_test_OtherLib - 2018.10.09 at 11h 11m 37s.xml">
+      <configuration name="go test OtherLib" configurationId="GoTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -343,13 +360,13 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.19621027" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19865526" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32996634" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32884398" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39955106" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32996634" />
@@ -379,13 +396,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/main/MusicTest_test.go" />
-    <entry file="file://$PROJECT_DIR$/MusicLib/Manager_test.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="34" column="20" selection-start-line="34" selection-start-column="20" selection-end-line="34" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/MusicLib/Player.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="630">
@@ -502,9 +512,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
           <caret line="7" column="25" selection-start-line="7" selection-start-column="25" selection-end-line="7" selection-end-column="25" />
-          <folding>
-            <element signature="e#16#49#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -519,9 +526,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="840">
           <caret line="31" selection-start-line="31" selection-end-line="31" />
-          <folding>
-            <element signature="e#16#40#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -555,17 +559,41 @@
     </entry>
     <entry file="file://D:/Go/src/time/time.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
+        <state relative-caret-position="-5">
           <caret line="616" selection-start-line="616" selection-end-line="618" selection-end-column="61" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Test/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="43" lean-forward="true" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="90">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/MusicLib/Manager_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="5" column="10" selection-start-line="5" selection-start-column="10" selection-end-line="5" selection-end-column="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OtherLib/Runner_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-352">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
           <folding>
-            <element signature="e#14#45#0" expanded="true" />
+            <element signature="e#18#60#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OtherLib/Runner.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-300">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+          <folding>
+            <element signature="e#18#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
