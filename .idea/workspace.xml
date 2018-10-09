@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5f63b3e2-554e-4ecb-b57e-81b396071d56" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/OtherLib/Runner.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/OtherLib/Runner_test.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/OtherLib/MyPool.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Test/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/Test/main.go" afterDir="false" />
     </list>
@@ -24,48 +23,49 @@
     <session id="-1414740965">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="14" />
+          <entry key="project.closed" value="16" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.10" value="1" />
           <entry key="project.open.time.17" value="1" />
           <entry key="project.open.time.18" value="2" />
+          <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.22" value="3" />
           <entry key="project.open.time.23" value="3" />
           <entry key="project.open.time.24" value="1" />
           <entry key="project.open.time.25" value="1" />
           <entry key="project.open.time.5" value="1" />
-          <entry key="project.open.time.6" value="1" />
-          <entry key="project.opened" value="15" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.opened" value="17" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="go" value="45" />
+          <entry key="go" value="49" />
           <entry key="json" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Go" value="45" />
+          <entry key="Go" value="49" />
           <entry key="JSON" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="dummy" value="6" />
-          <entry key="go" value="14742" />
+          <entry key="go" value="15962" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Go" value="14742" />
+          <entry key="Go" value="15962" />
           <entry key="PLAIN_TEXT" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.go.postfix.template.usages.trigger">
         <counts>
           <entry key=".append" value="1" />
-          <entry key=".println" value="1" />
+          <entry key=".println" value="2" />
         </counts>
       </usages-collector>
     </session>
@@ -75,20 +75,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Test/main.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="660">
+              <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/OtherLib/MyPool.go">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="661">
+              <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OtherLib/Runner.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-300">
+            <state relative-caret-position="480">
               <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <element signature="e#18#42#0" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -96,7 +102,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/OtherLib/Runner_test.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-352">
+            <state relative-caret-position="270">
               <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
               <folding>
                 <element signature="e#18#60#0" expanded="true" />
@@ -175,9 +181,11 @@
         <option value="$PROJECT_DIR$/Search/Feed.go" />
         <option value="$PROJECT_DIR$/OtherLib/Curl.go" />
         <option value="$PROJECT_DIR$/OtherLib/GoPrint..go" />
-        <option value="$PROJECT_DIR$/Test/main.go" />
         <option value="$PROJECT_DIR$/OtherLib/Runner_test.go" />
         <option value="$PROJECT_DIR$/OtherLib/Runner.go" />
+        <option value="$PROJECT_DIR$/OtherLib/Pool.go" />
+        <option value="$PROJECT_DIR$/Test/main.go" />
+        <option value="$PROJECT_DIR$/OtherLib/MyPool.go" />
       </list>
     </option>
   </component>
@@ -201,6 +209,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -249,7 +258,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,7 +286,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Go Test.go test OtherLib">
+  <component name="RunManager" selected="Go Build.go build main.go">
     <configuration name="go build Manager_test.go Manager.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="MyGoBook01" />
       <working_directory value="$PROJECT_DIR$/" />
@@ -287,11 +295,11 @@
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
-    <configuration name="go build Runner_test.go Runner.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
+    <configuration name="go build main.go" type="GoApplicationRunConfiguration" factoryName="Go Application" temporary="true" nameIsGenerated="true">
       <module name="MyGoBook01" />
       <working_directory value="$PROJECT_DIR$/" />
       <kind value="FILE" />
-      <filePath value="$PROJECT_DIR$/OtherLib/Runner_test.go|$PROJECT_DIR$/OtherLib/Runner.go" />
+      <filePath value="$PROJECT_DIR$/Test/main.go" />
       <directory value="$PROJECT_DIR$/" />
       <method v="2" />
     </configuration>
@@ -323,19 +331,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Go Build.go build Runner_test.go Runner.go" />
       <item itemvalue="Go Test.Runner_test.go Runner.go" />
       <item itemvalue="Go Build.go build Manager_test.go Manager.go" />
       <item itemvalue="Go Test.Manager_test.go Manager.go" />
       <item itemvalue="Go Test.go test OtherLib" />
+      <item itemvalue="Go Build.go build main.go" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Go Build.go build main.go" />
         <item itemvalue="Go Test.go test OtherLib" />
         <item itemvalue="Go Test.Manager_test.go Manager.go" />
         <item itemvalue="Go Build.go build Manager_test.go Manager.go" />
         <item itemvalue="Go Test.Runner_test.go Runner.go" />
-        <item itemvalue="Go Build.go build Runner_test.go Runner.go" />
       </list>
     </recent_temporary>
   </component>
@@ -360,7 +368,7 @@
     <frame x="-8" y="-8" width="1696" height="1026" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19865526" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20354523" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -564,10 +572,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/OtherLib/Pool.go" />
     <entry file="file://$PROJECT_DIR$/Test/main.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+        <state relative-caret-position="660">
+          <caret line="26" column="24" selection-start-line="26" selection-start-column="24" selection-end-line="26" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OtherLib/Runner.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OtherLib/Runner_test.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding>
+            <element signature="e#18#60#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -578,23 +604,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OtherLib/Runner_test.go">
+    <entry file="file://D:/Go/src/io/io.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-352">
-          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
-          <folding>
-            <element signature="e#18#60#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="288">
+          <caret line="97" column="5" selection-start-line="97" selection-start-column="5" selection-end-line="97" selection-end-column="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OtherLib/Runner.go">
+    <entry file="file://$PROJECT_DIR$/OtherLib/MyPool.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-300">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
-          <folding>
-            <element signature="e#18#42#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="661">
+          <caret line="77" lean-forward="true" selection-start-line="77" selection-end-line="77" />
         </state>
       </provider>
     </entry>
