@@ -9,7 +9,7 @@ import (
 
 const timeout = 3 * time.Second
 
-func TestOps(t *testing.T) {
+func TestRunner(t *testing.T) {
 	log.Println("Starting work")
 
 	r := New(timeout)

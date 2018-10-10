@@ -2,36 +2,60 @@ package main
 
 import (
 	"fmt"
-	"sync"
+	"runtime"
 	"time"
+	"../OtherLib"
 )
 
-var bytePool = sync.Pool{
-	New: func() interface{} {
-		b := make([]byte, 1024)
-		return &b
-	},
-}
+const length =1024
 
-func main() {
+func Test01() {
 	t := time.Now()
 
-	for i := 0; i < 1E10; i++ {
-		obj := make([]byte, 1024)
-		_ = obj
+	var arr [length * length * length]int
+
+	for i := 0; i < length*length*length; i++ {
+		arr[i] *= arr[i]
+		arr[i] *= arr[i]
+		arr[i] *= arr[i]
+		arr[i] *= arr[i]
+		arr[i] *= arr[i]
 	}
 
 	elapsed1 := time.Since(t)
-	t = time.Now()
+	fmt.Println("A:", elapsed1)
+}
 
-	for i := 0; i < 1E10; i++ {
-		obj := bytePool.Get().(*[]byte)
-		_ = obj
-		bytePool.Put(obj)
+func Test02() {
+	t := time.Now()
+
+	var arr [length][length][length]int
+
+	for i := 0; i < length; i++ {
+		for j := 0; j < length; j++ {
+			for k := 0; k < length; k++ {
+				arr[i][j][k] *= arr[i][j][k]
+				arr[i][j][k] *= arr[i][j][k]
+				arr[i][j][k] *= arr[i][j][k]
+				arr[i][j][k] *= arr[i][j][k]
+				arr[i][j][k] *= arr[i][j][k]
+			}
+		}
 	}
 
-	elapsed2 := time.Since(t)
+	elapsed1 := time.Since(t)
+	fmt.Println("B:", elapsed1)
 
-	fmt.Println("A:", elapsed1)
-	fmt.Println("B:", elapsed2)
+}
+
+func main() {
+	OtherLib.WorkPoolTest()
+
+
+	return
+	runtime.GOMAXPROCS(runtime.NumCPU())
+	go Test01()
+
+
+	time.Sleep(100*time.Second)
 }
