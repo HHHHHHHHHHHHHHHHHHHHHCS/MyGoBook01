@@ -1,0 +1,4 @@
+Error:2018/10/11 16:38:21 MyLog.go:34: I am Error
+Error:2018/10/11 16:42:59 MyLog.go:34: I am Error
+Error:2018/10/11 16:43:07 MyLog.go:34: I am Error
+Error:2018/10/11 17:04:03 MyLog.go:34: I am Error
