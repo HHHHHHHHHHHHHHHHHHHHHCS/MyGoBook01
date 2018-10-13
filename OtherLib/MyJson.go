@@ -27,7 +27,7 @@ type (
 )
 
 func MyJsonMain() {
-	Test02()
+	Test05()
 }
 
 func Test01() {
@@ -120,4 +120,36 @@ func Test04() {
 	str := `{"aa":"a123a"}`
 	json.Unmarshal([]byte(str), &t)
 	fmt.Println(t)
+}
+
+func Test05() {
+	var JSON = `
+{
+  "name": "Gopher",
+  "title": "programmer",
+  "contact": {
+    "home": "415.333.3333",
+    "cell": "415.555.5555"
+  } 
+}
+`
+
+	var c map[string]interface{}
+	err := json.Unmarshal([]byte(JSON), &c)
+	if err != nil {
+		log.Println("ERROR:", err)
+		return
+	}
+
+	for k, v := range c {
+		fmt.Println(k, v)
+	}
+
+	fmt.Println("==================================")
+
+	fmt.Println("Name:", c["name"])
+	fmt.Println("Title:", c["title"])
+	fmt.Println("Contact:")
+	fmt.Println("H:", c["contact"].(map[string]interface{})["home"])
+	fmt.Println("H:", c["contact"].(map[string]interface{})["cell"])
 }
