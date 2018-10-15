@@ -27,7 +27,7 @@ type (
 )
 
 func MyJsonMain() {
-	Test05()
+	Test06()
 }
 
 func Test01() {
@@ -152,4 +152,21 @@ func Test05() {
 	fmt.Println("Contact:")
 	fmt.Println("H:", c["contact"].(map[string]interface{})["home"])
 	fmt.Println("H:", c["contact"].(map[string]interface{})["cell"])
+}
+
+func Test06() {
+	c := make(map[string]interface{})
+	c["name"] = "Gopher"
+	c["title"] = "programmer"
+	c["contact"] = map[string]interface{}{
+		"home": "123123",
+		"cell": "asdasd",
+	}
+
+	data, err := json.MarshalIndent(c, "-", "/")
+	if err != nil {
+		log.Println("ERROR:", err)
+		return
+	}
+	fmt.Println(string(data))
 }

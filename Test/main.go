@@ -1,7 +1,21 @@
 package main
 
-import "../OtherLib"
+import (
+	"os"
+)
+
+var(
+	Stdin = newfile
+)
 
 func main()  {
-	OtherLib.MyJsonMain()
+
+}
+
+func NewFile(fd uintptr,name string) *os.File{
+	fdi :=int(fd)
+	if fdi<0{
+		return  nil
+	}
+	f:=&File{&file{}}
 }
