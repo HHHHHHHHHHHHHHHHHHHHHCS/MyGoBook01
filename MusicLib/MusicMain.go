@@ -1,14 +1,13 @@
-package main
+package MusicLib
 
 import (
-	"../MusicLib"
 	"bufio"
 	"fmt"
 	"os"
 	"strings"
 )
 
-var lib *MusicLib.MusicManager
+var lib *MusicManager
 var id int = 1
 var ctrk, signal chan int
 
@@ -21,7 +20,7 @@ func handleLibCommands(tokens []string) {
 		}
 	case "add":
 		if len(tokens) == 6 {
-			lib.Add(&MusicLib.MusicEntry{Name: tokens[2], Artist: tokens[3],
+			lib.Add(&MusicEntry{Name: tokens[2], Artist: tokens[3],
 				Source: tokens[4], FileType: tokens[5]})
 		} else {
 			fmt.Println("USAGE:lib add <name><artist><source><type>")
@@ -47,10 +46,10 @@ func handlePlayCommand(tokens []string) {
 		fmt.Println("The music", tokens[1], "does not exist.")
 		return
 	}
-	go MusicLib.Play(e.Source, e.FileType)
+	go Play(e.Source, e.FileType)
 }
 
-func main() {
+func MainTest() {
 	//runtime.GOMAXPROCS(runtime.NumCPU())//让GO满核心运行
 
 	fmt.Println(` 
@@ -60,7 +59,7 @@ func main() {
  lib remove <name> -- Remove the specified music from the lib 
  play <name> -- Play the specified music 
  `)
-	lib = MusicLib.NewMusicManager()
+	lib = NewMusicManager()
 	r := bufio.NewReader(os.Stdin)
 	for {
 		fmt.Print("Enter command-> ")
