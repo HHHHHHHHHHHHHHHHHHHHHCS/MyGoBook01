@@ -28,9 +28,24 @@ func login(w http.ResponseWriter, r *http.Request) {
 		t, _ := template.ParseFiles("login.html")
 		t.Execute(w, nil)
 	} else {
-		fmt.Println("username", r.Form["username"])
-		fmt.Println("password:", r.Form["password"])
+		//unsafe(w,r)
 	}
+}
+
+func unsafe(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("username", r.Form["username"])
+	fmt.Println("password:", r.Form["password"])
+	fmt.Fprint(w, r.Form["username"], r.Form["password"])
+}
+
+func safe(w http.ResponseWriter, r *http.Request) {
+	fmt.Println("username", r.Form["username"])
+	fmt.Println("password:", r.Form["password"])
+	fmt.Fprint(w, r.Form["username"], r.Form["password"])
+}
+
+func safeText() {
+
 }
 
 func Main_Form() {
