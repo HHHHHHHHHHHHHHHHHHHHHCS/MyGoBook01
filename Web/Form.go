@@ -5,6 +5,7 @@ import (
 	"html/template"
 	"log"
 	"net/http"
+	"os"
 	"strings"
 )
 
@@ -21,14 +22,14 @@ func sayHelloName_Form(w http.ResponseWriter, r *http.Request) {
 	fmt.Fprint(w, "Hello astaxie!")
 }
 
-func login(w http.ResponseWriter, r *http.Request) {
+func login_form(w http.ResponseWriter, r *http.Request) {
 	r.ParseForm()
 	fmt.Println("method:", r.Method)
 	if r.Method == "GET" {
-		t, _ := template.ParseFiles("login.html")
+		t, _ := template.ParseFiles("Web/html/form.html")
 		t.Execute(w, nil)
 	} else {
-		//unsafe(w,r)
+		safe(w,r)
 	}
 }
 
@@ -39,20 +40,22 @@ func unsafe(w http.ResponseWriter, r *http.Request) {
 }
 
 func safe(w http.ResponseWriter, r *http.Request) {
-	fmt.Println("username", r.Form["username"])
-	fmt.Println("password:", r.Form["password"])
-	fmt.Fprint(w, r.Form["username"], r.Form["password"])
-}
+	fmt.Println("username", template.HTMLEscapeString(r.Form.Get("username")))
+	fmt.Println("password:",template.HTMLEscapeString(r.Form.Get("password")))
+	template.HTMLEscape(w,[]byte(r.Form.Get("username")))
 
-func safeText() {
-
+	t, err := template.New("foo").Parse(`{{define "T"}}Hello, {{.}}!{{end}}`)
+	err = t.ExecuteTemplate(os.Stdout, "T", template.HTML("<script>alert('you have been pwned')</script>"))
+	fmt.Println()
+	fmt.Println(t,err)
 }
 
 func Main_Form() {
 	http.HandleFunc("/", sayHelloName)
-	http.HandleFunc("/login", login)
+	http.HandleFunc("/login", login_form)
 	err := http.ListenAndServe(":9090", nil)
 	if err != nil {
 		log.Fatalln("ListenAndServe:", err)
+
 	}
 }
