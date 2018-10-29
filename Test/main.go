@@ -5,5 +5,5 @@ import (
 )
 
 func main() {
-	Web.Main_RepeatForm()
+	Web.Main_Upload()
 }

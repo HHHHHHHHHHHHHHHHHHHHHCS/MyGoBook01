@@ -26,9 +26,9 @@ func login_repeatform(w http.ResponseWriter, r *http.Request) {
 		r.ParseForm()
 		token:=r.Form.Get("token")
 		if token!=""{
-
+			//在list 查重
 		}else{
-
+			//直接跳出 可能是假登录
 		}
 		fmt.Println("username length",len(r.Form["username"][0]))
 		fmt.Println("username",template.HTMLEscapeString(r.Form.Get("username")))
