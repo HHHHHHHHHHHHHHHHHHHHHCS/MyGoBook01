@@ -7,6 +7,7 @@ import (
 	"io"
 	"log"
 	"net/http"
+	"os"
 	"strconv"
 	"time"
 )
@@ -20,20 +21,28 @@ func login_upload(w http.ResponseWriter, r *http.Request) {
 		io.WriteString(h, strconv.FormatInt(curtime, 10))
 		fmt.Println("curtime", strconv.FormatInt(curtime, 10))
 		token := fmt.Sprintf("%x", h.Sum(nil))
-		fmt.Println("Sprintf",fmt.Sprintf("%x", h.Sum(nil)))
+		fmt.Println("Sprintf", fmt.Sprintf("%x", h.Sum(nil)))
 		t, _ := template.ParseFiles("Web/html/upload.html")
 		t.Execute(w, token)
 	} else {
 		token := r.Form.Get("token")
 		if token != "" {
 			//查重什么的
-			r.ParseMultipartForm(1024<<1)//byte
-			file,handler,err :=r.FormFile("uploadfile")
-			if err !=nil{
+			r.ParseMultipartForm(1024 << 1) //byte
+			file, handler, err := r.FormFile("uploadfile")
+			if err != nil {
 				fmt.Println(err)
 				return
 			}
-
+			defer file.Close()
+			fmt.Fprint(w, "%v", handler.Header)
+			f, err := os.OpenFile("./test/"+handler.Filename, os.O_WRONLY|os.O_CREATE, 0666)
+			if err != nil {
+				fmt.Println(err)
+				return
+			}
+			defer f.Close()
+			io.Copy(f, file)
 		} else {
 
 		}
