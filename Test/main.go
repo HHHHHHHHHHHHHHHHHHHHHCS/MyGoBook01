@@ -1,9 +1,7 @@
 package main
 
-import (
-	"../Web"
-)
+import "../OtherLib"
 
 func main() {
-	Web.Main_Upload()
+	OtherLib.Main_Mail()
 }
