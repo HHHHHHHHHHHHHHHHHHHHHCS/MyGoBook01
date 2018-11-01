@@ -1,7 +1,11 @@
 package main
 
-import "../Web"
+import (
+	"../OtherLib"
+	//"../Web"
+)
 
 func main() {
-	Web.Main_UploadFile()
+
+	OtherLib.Main_MySQL()
 }
