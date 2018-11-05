@@ -22,7 +22,6 @@ func PathExists(path string) (bool, error) {
 		return false, nil
 	}
 	return false, err
-
 }
 
 func Main_FileCopy() {
